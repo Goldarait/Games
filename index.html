@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Godarait Studio</title>
   <style>
     html, body {
@@ -22,8 +22,11 @@
       text-align: center;
     }
 
+    /* Header e footer ocupando toda a largura */
     header, footer {
-      width: 100%;
+      position: relative;
+      width: 100vw;
+      left: 0;
       box-sizing: border-box;
     }
 
@@ -38,6 +41,13 @@
       height: auto;
     }
 
+    footer {
+      padding: 20px;
+      background: linear-gradient(135deg, #9B27B0, #D52DBD, #F65A9C, #F99F3A);
+      font-size: 0.9em;
+    }
+
+    /* Grid de jogos para desktop */
     .games {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -107,21 +117,25 @@
       align-self: center;
     }
 
-    footer {
-      padding: 20px;
-      background: linear-gradient(135deg, #9B27B0, #D52DBD, #F65A9C, #F99F3A);
-      font-size: 0.9em;
-      width: 100%;
-    }
+    /* Ajustes responsivos para celulares */
+    @media (max-width: 600px) {
+      .games {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px 10px;
+      }
 
-    /* Pequenos ajustes responsivos */
-    @media (max-width: 480px) {
       header {
         padding: 20px 10px;
       }
-      .games {
-        padding: 30px 10px;
-        gap: 20px;
+
+      .game-info h2 {
+        font-size: 1.2em;
+      }
+
+      .game-info p {
+        font-size: 0.95em;
       }
     }
   </style>
