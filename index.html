@@ -9,38 +9,44 @@
       height: 100%;
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
-      background: #1a1a1a;
-      color: white;
+      width: 100%;
     }
 
     body {
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background: #1a1a1a;
+      color: white;
+      text-align: center;
     }
 
     header, footer {
-      width: 100%; /* largura total da tela */
+      width: 100%;
       box-sizing: border-box;
+    }
+
+    header {
       padding: 40px 20px;
       background: linear-gradient(135deg, #9B27B0, #D52DBD, #F65A9C, #F99F3A);
     }
 
     header img {
       max-width: 250px;
-      display: block;
-      margin: 0 auto;
+      width: 100%;
+      height: auto;
     }
 
     .games {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      padding: 40px 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      padding: 50px 20px;
       max-width: 1400px;
       margin: 0 auto;
       flex-grow: 1;
+      box-sizing: border-box;
     }
 
     .game {
@@ -49,18 +55,19 @@
       overflow: hidden;
       display: flex;
       flex-direction: column;
+      justify-content: flex-start;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .game:hover {
-      transform: scale(1.05);
-      box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+      transform: scale(1.08);
+      box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.5);
     }
 
     .game img {
       width: 100%;
       height: auto;
-      cursor: pointer;
+      display: block;
     }
 
     .game-info {
@@ -84,7 +91,7 @@
 
     .game-info .genre {
       font-size: 0.9em;
-      color: #fff;
+      color: #D52DBD;
       margin-bottom: 15px;
     }
 
@@ -101,18 +108,20 @@
     }
 
     footer {
+      padding: 20px;
+      background: linear-gradient(135deg, #9B27B0, #D52DBD, #F65A9C, #F99F3A);
       font-size: 0.9em;
-      text-align: center;
+      width: 100%;
     }
 
-    /* Ajustes mobile finos */
-    @media (max-width: 500px) {
-      header, footer {
-        padding: 30px 10px;
+    /* Pequenos ajustes responsivos */
+    @media (max-width: 480px) {
+      header {
+        padding: 20px 10px;
       }
       .games {
-        gap: 20px;
         padding: 30px 10px;
+        gap: 20px;
       }
     }
   </style>
@@ -123,11 +132,8 @@
   </header>
 
   <section class="games">
-
     <div class="game">
-      <a href="https://store.steampowered.com/app/2389560/9_Lives_to_Defend/" target="_blank">
-        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2389560/header.jpg" alt="9 Lives to Defend">
-      </a>
+      <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2389560/header.jpg" alt="9 Lives to Defend">
       <div class="game-info">
         <h2>9 Lives to Defend</h2>
         <p class="genre">Bullet Heaven</p>
@@ -137,9 +143,7 @@
     </div>
 
     <div class="game">
-      <a href="https://store.steampowered.com/app/2234420/Flower_Memories/" target="_blank">
-        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2234420/header.jpg" alt="Flower Memories">
-      </a>
+      <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2234420/header.jpg" alt="Flower Memories">
       <div class="game-info">
         <h2>Flower Memories</h2>
         <p class="genre">Memory Game</p>
@@ -149,9 +153,7 @@
     </div>
 
     <div class="game">
-      <a href="https://store.steampowered.com/app/2058370/Jack_Big_Chin_Alien_Invasion/" target="_blank">
-        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2058370/header.jpg" alt="Jack Big Chin: Alien Invasion">
-      </a>
+      <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2058370/header.jpg" alt="Jack Big Chin: Alien Invasion">
       <div class="game-info">
         <h2>Jack Big Chin: Alien Invasion</h2>
         <p class="genre">Action-Adventure</p>
@@ -159,7 +161,6 @@
         <a href="https://store.steampowered.com/app/2058370/Jack_Big_Chin_Alien_Invasion/" target="_blank" class="btn">See More</a>
       </div>
     </div>
-
   </section>
 
   <footer>
