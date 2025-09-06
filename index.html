@@ -7,41 +7,37 @@
   <style>
     html, body {
       height: 100%;
-      width: 100%;
       margin: 0;
       padding: 0;
+      font-family: Arial, sans-serif;
+      background: #1a1a1a;
+      color: white;
     }
 
     body {
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      font-family: Arial, sans-serif;
-      background: #1a1a1a;
-      color: white;
-      text-align: center;
     }
 
     header, footer {
-      width: 100vw; /* ocupa toda a largura da tela */
+      width: 100%; /* largura total da tela */
       box-sizing: border-box;
-      position: relative;
-    }
-
-    header {
       padding: 40px 20px;
       background: linear-gradient(135deg, #9B27B0, #D52DBD, #F65A9C, #F99F3A);
     }
 
     header img {
       max-width: 250px;
+      display: block;
+      margin: 0 auto;
     }
 
     .games {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 40px;
-      padding: 50px 30px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 40px 20px;
       max-width: 1400px;
       margin: 0 auto;
       flex-grow: 1;
@@ -53,19 +49,17 @@
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .game:hover {
-      transform: scale(1.08);
-      box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.5);
+      transform: scale(1.05);
+      box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
     }
 
     .game img {
       width: 100%;
       height: auto;
-      display: block;
       cursor: pointer;
     }
 
@@ -90,7 +84,7 @@
 
     .game-info .genre {
       font-size: 0.9em;
-      color: #ffffff;
+      color: #fff;
       margin-bottom: 15px;
     }
 
@@ -107,9 +101,19 @@
     }
 
     footer {
-      padding: 20px;
-      background: linear-gradient(135deg, #9B27B0, #D52DBD, #F65A9C, #F99F3A);
       font-size: 0.9em;
+      text-align: center;
+    }
+
+    /* Ajustes mobile finos */
+    @media (max-width: 500px) {
+      header, footer {
+        padding: 30px 10px;
+      }
+      .games {
+        gap: 20px;
+        padding: 30px 10px;
+      }
     }
   </style>
 </head>
