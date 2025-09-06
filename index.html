@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Godarait Studio</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background: #1a1a1a;
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #9B27B0, #D52DBD, #F65A9C, #F99F3A);
+    }
+
+    header img {
+      max-width: 250px;
+    }
+
+    .games {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 40px;
+      padding: 50px 30px;
+      max-width: 1400px;
+      margin: 0 auto;
+      flex-grow: 1;
+    }
+
+    .game {
+      background: rgba(255, 255, 255, 0.07);
+      border-radius: 15px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .game:hover {
+      transform: scale(1.08);
+      box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.5);
+    }
+
+    .game img {
+      width: 100%;
+      height: auto;
+      display: block;
+      cursor: pointer;
+    }
+
+    .game-info {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .game-info h2 {
+      margin: 10px 0;
+      font-size: 1.4em;
+      color: #F99F3A;
+    }
+
+    .game-info p {
+      font-size: 1em;
+      color: #fff;
+      margin: 5px 0;
+    }
+
+    .game-info .genre {
+      font-size: 0.9em;
+      color: #ffffff;
+      margin-bottom: 15px;
+    }
+
+    .game-info .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #F99F3A;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: auto;
+      font-weight: bold;
+      align-self: center;
+    }
+
+    footer {
+      padding: 20px;
+      background: linear-gradient(135deg, #9B27B0, #D52DBD, #F65A9C, #F99F3A);
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="Godarait_logo_site_small.png" alt="Godarait Studio Logo">
+  </header>
+
+  <section class="games">
+
+    <div class="game">
+      <a href="https://store.steampowered.com/app/2389560/9_Lives_to_Defend/" target="_blank">
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2389560/header.jpg" alt="9 Lives to Defend">
+      </a>
+      <div class="game-info">
+        <h2>9 Lives to Defend</h2>
+        <p class="genre">Bullet Heaven</p>
+        <p>Survive waves of enemies in this charming bullet heaven game with a feline twist. Choose your upgrades, play as different versions of Loki, and defend the house with your nine lives.</p>
+        <a href="https://store.steampowered.com/app/2389560/9_Lives_to_Defend/" target="_blank" class="btn">See More</a>
+      </div>
+    </div>
+
+    <div class="game">
+      <a href="https://store.steampowered.com/app/2234420/Flower_Memories/" target="_blank">
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2234420/header.jpg" alt="Flower Memories">
+      </a>
+      <div class="game-info">
+        <h2>Flower Memories</h2>
+        <p class="genre">Memory Game</p>
+        <p>Enhance your memory, attention, and concentration in a serene environment. Play solo or challenge a friend to see who can memorize the most flowers.</p>
+        <a href="https://store.steampowered.com/app/2234420/Flower_Memories/" target="_blank" class="btn">See More</a>
+      </div>
+    </div>
+
+    <div class="game">
+      <a href="https://store.steampowered.com/app/2058370/Jack_Big_Chin_Alien_Invasion/" target="_blank">
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2058370/header.jpg" alt="Jack Big Chin: Alien Invasion">
+      </a>
+      <div class="game-info">
+        <h2>Jack Big Chin: Alien Invasion</h2>
+        <p class="genre">Action-Adventure</p>
+        <p>Save humanity by helping Jack Big Chin defeat alien invaders in this challenging action-adventure game with 3D platform elements. Improve your weapons and activate cannons to complete your missions.</p>
+        <a href="https://store.steampowered.com/app/2058370/Jack_Big_Chin_Alien_Invasion/" target="_blank" class="btn">See More</a>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    © 2025 Godarait Studio - All rights reserved.
+  </footer>
+</body>
+</html>
