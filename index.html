@@ -22,7 +22,6 @@
       text-align: center;
     }
 
-    /* Header e footer ocupando toda a largura */
     header, footer {
       position: relative;
       width: 100vw;
@@ -101,7 +100,7 @@
 
     .game-info .genre {
       font-size: 0.9em;
-      color: #D52DBD;
+      color: #fff; /* alterado para branco */
       margin-bottom: 15px;
     }
 
@@ -117,7 +116,6 @@
       align-self: center;
     }
 
-    /* Ajustes responsivos para celulares */
     @media (max-width: 600px) {
       .games {
         display: flex;
@@ -147,7 +145,9 @@
 
   <section class="games">
     <div class="game">
-      <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2389560/header.jpg" alt="9 Lives to Defend">
+      <a href="https://store.steampowered.com/app/2389560/9_Lives_to_Defend/" target="_blank">
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2389560/header.jpg" alt="9 Lives to Defend">
+      </a>
       <div class="game-info">
         <h2>9 Lives to Defend</h2>
         <p class="genre">Bullet Heaven</p>
@@ -157,7 +157,9 @@
     </div>
 
     <div class="game">
-      <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2234420/header.jpg" alt="Flower Memories">
+      <a href="https://store.steampowered.com/app/2234420/Flower_Memories/" target="_blank">
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2234420/header.jpg" alt="Flower Memories">
+      </a>
       <div class="game-info">
         <h2>Flower Memories</h2>
         <p class="genre">Memory Game</p>
@@ -167,7 +169,9 @@
     </div>
 
     <div class="game">
-      <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2058370/header.jpg" alt="Jack Big Chin: Alien Invasion">
+      <a href="https://store.steampowered.com/app/2058370/Jack_Big_Chin_Alien_Invasion/" target="_blank">
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2058370/header.jpg" alt="Jack Big Chin: Alien Invasion">
+      </a>
       <div class="game-info">
         <h2>Jack Big Chin: Alien Invasion</h2>
         <p class="genre">Action-Adventure</p>
