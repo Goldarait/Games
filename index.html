@@ -46,7 +46,6 @@
       font-size: 0.9em;
     }
 
-    /* Grid de jogos para desktop */
     .games {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -100,20 +99,44 @@
 
     .game-info .genre {
       font-size: 0.9em;
-      color: #fff; /* alterado para branco */
+      color: #fff;
       margin-bottom: 15px;
     }
 
-    .game-info .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background: #F99F3A;
+    .store-links {
+      margin-top: auto;
+      text-align: center;
+    }
+
+    .store-links p {
+      margin: 10px 0;
+      font-weight: bold;
+      color: #F99F3A;
+    }
+
+    .store-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 15px;
+      background: transparent;
+      border: 2px solid #F99F3A;
       color: white;
       text-decoration: none;
       border-radius: 5px;
-      margin-top: auto;
+      margin: 5px;
       font-weight: bold;
-      align-self: center;
+      transition: all 0.3s ease;
+    }
+
+    .store-links a:hover {
+      background: #F99F3A;
+      color: #1a1a1a;
+    }
+
+    .store-links img {
+      width: 20px;
+      height: 20px;
     }
 
     @media (max-width: 600px) {
@@ -144,6 +167,7 @@
   </header>
 
   <section class="games">
+    <!-- 9 Lives to Defend -->
     <div class="game">
       <a href="https://store.steampowered.com/app/2389560/9_Lives_to_Defend/" target="_blank">
         <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2389560/header.jpg" alt="9 Lives to Defend">
@@ -152,10 +176,26 @@
         <h2>9 Lives to Defend</h2>
         <p class="genre">Bullet Heaven</p>
         <p>Survive waves of enemies in this charming bullet heaven game with a feline twist. Choose your upgrades, play as different versions of Loki, and defend the house with your nine lives.</p>
-        <a href="https://store.steampowered.com/app/2389560/9_Lives_to_Defend/" target="_blank" class="btn">See More</a>
+        
+        <div class="store-links">
+          <p>See on:</p>
+          <a href="https://store.steampowered.com/app/2389560/9_Lives_to_Defend/" target="_blank">
+            <img src="Steam_icon.svg" alt="Steam"> Steam
+          </a>
+          <a href="https://www.xbox.com/pt-BR/games/store/9-lives-to-defend/9MXWV9BZ2DV5" target="_blank">
+            <img src="Xbox_icon.svg" alt="Xbox"> Xbox
+          </a>
+          <a href="https://www.nintendo.com/us/store/products/9-lives-to-defend-switch/" target="_blank">
+            <img src="Nintendo_icon.svg" alt="Nintendo"> Nintendo Switch
+          </a>
+          <a href="https://store.playstation.com/pt-br/concept/10015030/" target="_blank">
+            <img src="PlayStation_icon.svg" alt="PlayStation"> PlayStation
+          </a>
+        </div>
       </div>
     </div>
 
+    <!-- Flower Memories -->
     <div class="game">
       <a href="https://store.steampowered.com/app/2234420/Flower_Memories/" target="_blank">
         <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2234420/header.jpg" alt="Flower Memories">
@@ -164,10 +204,17 @@
         <h2>Flower Memories</h2>
         <p class="genre">Memory Game</p>
         <p>Enhance your memory, attention, and concentration in a serene environment. Play solo or challenge a friend to see who can memorize the most flowers.</p>
-        <a href="https://store.steampowered.com/app/2234420/Flower_Memories/" target="_blank" class="btn">See More</a>
+        
+        <div class="store-links">
+          <p>See on:</p>
+          <a href="https://store.steampowered.com/app/2234420/Flower_Memories/" target="_blank">
+            <img src="Steam_icon.svg" alt="Steam"> Steam
+          </a>
+        </div>
       </div>
     </div>
 
+    <!-- Jack Big Chin -->
     <div class="game">
       <a href="https://store.steampowered.com/app/2058370/Jack_Big_Chin_Alien_Invasion/" target="_blank">
         <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2058370/header.jpg" alt="Jack Big Chin: Alien Invasion">
@@ -176,7 +223,13 @@
         <h2>Jack Big Chin: Alien Invasion</h2>
         <p class="genre">Action-Adventure</p>
         <p>Save humanity by helping Jack Big Chin defeat alien invaders in this challenging action-adventure game with 3D platform elements. Improve your weapons and activate cannons to complete your missions.</p>
-        <a href="https://store.steampowered.com/app/2058370/Jack_Big_Chin_Alien_Invasion/" target="_blank" class="btn">See More</a>
+        
+        <div class="store-links">
+          <p>See on:</p>
+          <a href="https://store.steampowered.com/app/2058370/Jack_Big_Chin_Alien_Invasion/" target="_blank">
+            <img src="Steam_icon.svg" alt="Steam"> Steam
+          </a>
+        </div>
       </div>
     </div>
   </section>
